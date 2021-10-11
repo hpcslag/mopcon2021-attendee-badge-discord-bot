@@ -112,7 +112,7 @@ func messageCreate(s *discordgo.Session, m *discordgo.MessageCreate) {
 			if badge, ok := KeyPairMap[commands[1]]; ok {
 				usedToken[commands[1]] = &Record{
 					User: m.Author.ID,
-					Time: time.Now().Format("2006-01-02-15:04:05"),
+					Time: time.Now().Format("2006-01-02 15:04:05"),
 				}
 
 				s.GuildMemberRoleAdd(GuildID, m.Author.ID, badge)
